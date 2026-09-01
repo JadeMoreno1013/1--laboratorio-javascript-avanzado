@@ -50,9 +50,8 @@ const paso5 = new Promise((resolve) => {
 
 
 async function runCasoLimite() {
-  //console.log("--- Inicio del Pipeline de Tareas Numeradas ---");
 
-  // Se registran en el arreglo en el orden exacto en que el Event Loop las resuelve
+  // Se registran en el orden exacto en que el Event Loop las resuelve
   await Promise.all([
     paso1.then((e) => register.push(e)),
     paso2.then((e) => register.push(e)),
